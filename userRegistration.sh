@@ -16,14 +16,25 @@ function nameValidation() {
 }
 
 function emailValidation() {
-  email=$1
-  pat="[a-z]{1}([A-Za-z0-9]{1,}|[A-Za-z0-9]{1,}[-.]{1}[A-Za-z0-9]{1,})[A-Za-z0-9]{1}@[a-z0-9]{1,}.(com|net).?(au|com)?"
-  if [[ $email =~ $pat ]]
-  then
-    echo good email
-  else
-    echo enter proper email
-  fi
+	email=$1
+	pat="[a-z]{1}([A-Za-z0-9]{1,}|[A-Za-z0-9]{1,}[-.]{1}[A-Za-z0-9]{1,})[A-Za-z0-9]{1}@[a-z0-9]{1,}.(com|net).?(au|com)?"
+	if [[ $email =~ $pat ]]
+	then
+		echo good email
+	else
+		echo enter proper email
+	fi
+}
+
+function mobileValidation() {
+	mobile=$1
+	pat="[0-9]{2} [0-9]{10}"
+	if [[ $mobile =~ $pat ]]
+	then
+		echo good mobile
+	else
+		echo enter proper mobile
+	fi
 }
 
 Echo "Welcome to user registration"
@@ -36,3 +47,6 @@ Echo "Welcome to user registration"
 echo "Enter your emailId"
 read email
 emailValidation $email
+echo "Enter your mobile no"
+read mobile
+mobileValidation $mobile
