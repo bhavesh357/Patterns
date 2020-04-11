@@ -17,7 +17,7 @@ function nameValidation() {
 
 function emailValidation() {
 	email=$1
-	pat="[a-z]{1}([A-Za-z0-9]{1,}|[A-Za-z0-9]{1,}[-.]{1}[A-Za-z0-9]{1,})[A-Za-z0-9]{1}@[a-z0-9]{1,}.(com|net).?(au|com)?"
+	pat="[\w\d]{1,}[.\-#!]?[\w\d]{1,}@[\w\d]{1,}.(com|co|net).?([a-z]{2})?"
 	if [[ $email =~ $pat ]]
 	then
 		echo good email
