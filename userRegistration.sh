@@ -39,8 +39,8 @@ function mobileValidation() {
 
 function passwordValidation() {
 	password=$1
-	pat="(?=[A-Z])[A-Za-z0-9-_!@$%^&*()]{8,}"
-	if [[ $mobile =~ $pat ]]
+	pat="(?=.*[A-Z])[a-zA-Z\d]{8,}"
+	if [[ $password =~ $pat ]]
 	then
 		echo good password
 	else
