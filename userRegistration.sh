@@ -37,16 +37,30 @@ function mobileValidation() {
 	fi
 }
 
+function passwordValidation() {
+	password=$1
+	pat="[A-Za-z0-9-_!@$%^&*()]{8,}"
+	if [[ $mobile =~ $pat ]]
+	then
+		echo good password
+	else
+		echo enter proper password
+	fi
+}
+
 Echo "Welcome to user registration"
-#echo "Enter your first name"
-#read first
-#nameValidation $first
-#echo "Enter your last name"
-#read last
-#nameValidation $last
+echo "Enter your first name"
+read first
+nameValidation $first
+echo "Enter your last name"
+read last
+nameValidation $last
 echo "Enter your emailId"
 read email
 emailValidation $email
 echo "Enter your mobile no"
 read mobile
 mobileValidation $mobile
+echo "Enter your password"
+read password
+passwordValidation $password
