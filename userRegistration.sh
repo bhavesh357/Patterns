@@ -4,9 +4,9 @@ shopt -s extglob
 #variable
 
 
-passwordPat="^(?=.*[A-Z])(?=.*[0-9])(?=.*[A-Za-z0-9@#!$%^&*()_-]{8,})[A-Za-z0-9]{1,}[@#!$%^&*()_-][A-Za-z0-9]{1,}$"
+passwordPat="^(?=.*[A-Z])(?=.*[0-9])(?=.*[A-Za-z0-9@#!$%^&*()_-]{8,})[A-Za-z0-9]{1,}?[@#!$%^&*()_-][A-Za-z0-9]{1,}?$"
 mobilePat="[0-9]{2} [0-9]{10}"
-emailPat="[\w\d]{1,}[.\-#!]?[\w\d]{1,}@[\w\d]{1,}.(com|co|net).?([a-z]{2})?"
+emailPat="[\w\d]{1,}[.\-#!]?[\w\d]{1,}@[\w\d]{1,}.[a-z]{2,3}.?([a-z]{2})?"
 namePat="^[A-Z][a-z]{2,}$"
 		
 function nameValidation() {
